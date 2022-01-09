@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS posts;
+
+CREATE TABLE "posts" (
+	"id"	INTEGER,
+	"title"	TEXT NOT NULL,
+	"content"	TEXT NOT NULL,
+	"subreddit"	TEXT,
+	"url"	TEXT,
+	"permalink"	TEXT,
+	"uuid"	TEXT NOT NULL,
+	"new"	BOOLEAN NOT NULL DEFAULT 0,
+	"created"	TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	UNIQUE("uuid"),
+	PRIMARY KEY("id" AUTOINCREMENT)
+)
